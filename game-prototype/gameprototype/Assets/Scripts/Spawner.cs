@@ -6,20 +6,17 @@ public class Spawner : MonoBehaviour {
 
     public GameObject templateGingerbread;
     public GameObject[] spawnPoints;
-    public float spawnTargetTime = 5f;
+    public float spawnTargetTime = 2f;
     private float spawnElapsedTime = 0f;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
+    
 	
 	// Update is called once per frame
 	void Update () {
 
         if (spawnElapsedTime >= spawnTargetTime) {
             Spawn();
-            spawnElapsedTime = 0f;
+            spawnElapsedTime = 4f;
         }
         spawnElapsedTime = spawnElapsedTime + Time.deltaTime;
         Debug.Log("elapsed=" + spawnElapsedTime);
